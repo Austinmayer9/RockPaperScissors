@@ -6,24 +6,28 @@
   </head>
   <body>
     <script>
-let rockPaperScissors = parseFloat(
-  prompt(
-
-  )
-);
+      let values = ["Rock", "Paper", "Scissors"];
+      let rockPaperScissors = window.prompt("Rock, Paper, or Scissors?");
+      
       function computerPlay() {
-        let values = ["Rock", "Paper", "Scissors"],
+        
           computerSelection = values[Math.floor(Math.random() * values.length)];
         console.log(computerSelection);
-
-        
       }
 
-      console.log(computerPlay());
+      computerPlay();
 
       function playerPlay() {
-        
+        playerSelection = rockPaperScissors;
+        console.log(playerSelection);
       }
+
+      playerPlay();
+
+      //if (computerPlay() === Rock && playerPlay() === Rock) {
+        //console.log("It was a draw");
+      //}
+
     </script>
   </body>
 </html>
