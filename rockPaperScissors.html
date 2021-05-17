@@ -1,71 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="style.css" media="screen"/>
+  
   <head>
     <meta charset="utf-8" />
     <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
   </head>
   <body>
-    <script>
-      let values = ["Rock", "Paper", "Scissors"];
+<div class="text">
+    <h1>Welcome to the Orgin of Life</h1> 
+    <p>The outcome of this game will decide if you get to choose your planet of orgin...</p>
+    <p>Lose, and your fate is up to the universe...</p>
+    <p>Win, and the fate of your universe is up to you.</p>
+  </div>
 
-      function computerPlay() {
-        computerSelection = values[Math.floor(Math.random() * values.length)];
-        console.log(computerSelection);
-      }
-
-      function playerPlay() {
-        let rockPaperScissors = window.prompt("Rock, Paper, or Scissors?");
-
-        playerSelection = rockPaperScissors;
-        console.log(playerSelection);
-      }
-
-      function playRound() {
-        computerPlay();
-        playerPlay();
-
-        //Rules
-
-        if (computerSelection == playerSelection) {
-          console.log("It was a draw");
-        } else if (computerSelection == "Paper" && playerSelection == "Rock") {
-          console.log("You Lose! Paper beats Rock");
-        } else if (
-          computerSelection == "Paper" &&
-          playerSelection == "Scissors"
-        ) {
-          console.log("You won! Scissors beats Paper");
-        } else if (
-          computerSelection == "Rock" &&
-          playerSelection == "Scissors"
-        ) {
-          console.log("You Lose! Rock beats Scissors");
-        } else if (computerSelection == "Rock" && playerSelection == "Paper") {
-          console.log("You won! Paper beats Rock");
-        } else if (
-          computerSelection == "Scissors" &&
-          playerSelection == "Paper"
-        ) {
-          console.log("You Lose! Paper beats Scissors");
-        } else if (
-          computerSelection == "Scissors" &&
-          playerSelection == "Rock"
-        ) {
-          console.log("You won! Rock beats Scissors");
-        }
-      }
-
-      function game() {
-        var times = 5;
-        for (var i = 0; i < times; i++) {
-          playRound();
-        }
-      }
-
-      //Plays a game of 5
-
-      game();
-      
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
